@@ -178,6 +178,7 @@ article {
 
 		$sel_email = "select * from memberRegistry where eMail='$eMail'";
 		$run_email = mysqli_query($con,$sel_email);
+		
 		$check_email = mysqli_num_rows($run_email);
 		if($passWord=='' OR $confirmPass=='' OR $passWord!=$confirmPass OR strlen($passWord)<8){
 			echo "<script>alert('No set password, password does not match or password does not meet minimum 8-character length')</script>";
